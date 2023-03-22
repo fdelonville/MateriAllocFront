@@ -22,7 +22,11 @@ export class LoginComponent {
     if( this.form.valid ){
       const loginForm: LoginForm = {...this.form.value}
       this.authService.login(loginForm).subscribe({
-          next: (r: any) => {console.log(r.token)}
+          next: (r: any) => {
+            sessionStorage.setItem('token',r.token)
+            sessionStorage.setItem('roles', r.roles)
+            sessionStorage.setItem('username', r.username)
+          }
       })
       this.form.reset({
         'username': '',

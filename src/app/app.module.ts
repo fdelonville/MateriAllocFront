@@ -8,13 +8,15 @@ import { HeaderComponent } from './components/header/header.component';
 import { LoginComponent } from './components/accueil/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { DisplayAllComponent } from './components/request/display-all/display-all.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AccueilComponent,
     HeaderComponent,
-    LoginComponent
+    LoginComponent,
+    DisplayAllComponent
   ],
   imports: [
     BrowserModule,

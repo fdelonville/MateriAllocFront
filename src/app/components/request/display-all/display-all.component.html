@@ -1,0 +1,10 @@
+<h2>Liste des requêtes</h2>
+<ul>
+    <li *ngFor="let request of requests">
+        <p> Date : {{request.date}} </p>
+        <p> Heure de début : {{request.beginTime}} </p>
+        <p> Heure de fin : {{request.endTime}} </p>
+        <p> Statut : {{request.currentStatus}} </p>
+        <p> Demandeur : {{request.madeBy}} </p>
+    </li>
+</ul>

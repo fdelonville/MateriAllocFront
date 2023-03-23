@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { RoomRequest } from 'src/app/models/request.model';
 import { RequestService } from 'src/app/services/request.service';
 
@@ -12,12 +13,20 @@ export class DisplayAllComponent implements OnInit {
   requests?: any
 
   ngOnInit(): void {
-    this.requestService.getAllRequests().subscribe(
+    this.requestService.getAllRequests('PENDING').subscribe(
       {next:(r:any) => {
       this.requests = r;
     }
     })
   } 
+
+  onSelected(currentStatus:string): void {
+    this.requestService.getAllRequests(currentStatus).subscribe(
+      {next:(r:any) => {
+        this.requests = r;
+     }
+    })
+  }
 
 
 

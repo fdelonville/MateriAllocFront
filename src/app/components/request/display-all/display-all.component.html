@@ -1,4 +1,11 @@
 <h2>Liste des requêtes</h2>
+    <select #status (change)="onSelected(status.value)">
+        <option default value="">Toutes</option>
+        <option value="PENDING">En cours de traitement</option>
+        <option value="ACCEPTED">Acceptées</option>
+        <option value="REFUSED">Refusées</option>
+        <option value="RELOCATING">En attente d'un nouveau local</option>
+    </select>
 <ul>
     <li *ngFor="let request of requests">
         <p> Date : {{request.date}} </p>

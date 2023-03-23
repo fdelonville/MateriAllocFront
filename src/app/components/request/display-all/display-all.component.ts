@@ -13,7 +13,7 @@ export class DisplayAllComponent implements OnInit {
   requests?: any
 
   ngOnInit(): void {
-    this.requestService.getAllRequests('PENDING').subscribe(
+    this.requestService.getAllRequests('').subscribe(
       {next:(r:any) => {
       this.requests = r;
     }

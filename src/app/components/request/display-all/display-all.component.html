@@ -1,3 +1,4 @@
+<div class = "content">
 <h2>Liste des requêtes</h2>
     <select #status (change)="onSelected(status.value)">
         <option default value="">Toutes</option>
@@ -8,10 +9,12 @@
     </select>
 <ul>
     <li *ngFor="let request of requests">
-        <p> Date : {{request.date}} </p>
-        <p> Heure de début : {{request.beginTime}} </p>
-        <p> Heure de fin : {{request.endTime}} </p>
-        <p> Statut : {{request.currentStatus}} </p>
-        <p> Demandeur : {{request.madeBy}} </p>
+        <a [routerLink]="[request.id]"><h4> {{request.id}} </h4></a>
+        <p>Date : {{request.date}} </p>
+        <p>Heure de début : {{request.beginTime}} </p>
+        <p>Heure de fin : {{request.endTime}} </p>
+        <p>Statut : {{request.currentStatus}} </p>
+        <p>Demandeur : {{request.madeBy}} </p>
     </li>
 </ul>
+</div>

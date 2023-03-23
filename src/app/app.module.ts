@@ -9,6 +9,7 @@ import { LoginComponent } from './components/accueil/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DisplayAllComponent } from './components/request/display-all/display-all.component';
+import { DisplayOneComponent } from './components/request/display-one/display-one.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DisplayAllComponent } from './components/request/display-all/display-al
     AccueilComponent,
     HeaderComponent,
     LoginComponent,
-    DisplayAllComponent
+    DisplayAllComponent,
+    DisplayOneComponent
   ],
   imports: [
     BrowserModule,

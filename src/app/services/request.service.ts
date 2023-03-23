@@ -18,7 +18,7 @@ export class RequestService {
     return this.httpClient.get<RoomRequest[]>('http://localhost:8080/api/request/future', {params})
   }
   getOneRequest(id: number){
-    return this.httpClient.get('http://localhost:8080/api/request/' + id)
+    return this.httpClient.get<RoomRequest>('http://localhost:8080/api/request/' + id)
   }
   acceptRequest(id: number, justification: string, roomID: number){
     return this.httpClient.post('http://localhost:8080/api/request/' + id + '/accept',HttpParams.arguments( justification, roomID))

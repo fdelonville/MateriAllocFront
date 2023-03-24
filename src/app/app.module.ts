@@ -10,6 +10,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DisplayAllComponent } from './components/request/display-all/display-all.component';
 import { DisplayOneComponent } from './components/request/display-one/display-one.component';
+import { Page404Component } from './components/page404/page404.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DisplayOneComponent } from './components/request/display-one/display-on
     HeaderComponent,
     LoginComponent,
     DisplayAllComponent,
-    DisplayOneComponent
+    DisplayOneComponent,
+    Page404Component
   ],
   imports: [
     BrowserModule,

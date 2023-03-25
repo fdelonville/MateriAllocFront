@@ -4,6 +4,7 @@ import { AccueilComponent } from './components/accueil/accueil.component';
 import { Page404Component } from './components/page404/page404.component';
 import { DisplayAllComponent } from './components/request/display-all/display-all.component';
 import { DisplayOneComponent } from './components/request/display-one/display-one.component';
+import { NewComponent } from './components/request/new/new.component';
 
 const routes: Routes = [
   
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path: 'requetes',
     component: DisplayAllComponent
+  },
+  {
+    path: 'nouvelle',
+    component: NewComponent
   },
   {
     path: '',

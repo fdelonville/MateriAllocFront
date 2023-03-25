@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DisplayAllComponent } from './components/request/display-all/display-all.component';
 import { DisplayOneComponent } from './components/request/display-one/display-one.component';
 import { Page404Component } from './components/page404/page404.component';
+import { NewComponent } from './components/request/new/new.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { Page404Component } from './components/page404/page404.component';
     LoginComponent,
     DisplayAllComponent,
     DisplayOneComponent,
-    Page404Component
+    Page404Component,
+    NewComponent
   ],
   imports: [
     BrowserModule,

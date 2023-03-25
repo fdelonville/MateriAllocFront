@@ -1,0 +1,36 @@
+<form>
+    <h1>Nouvelle demande</h1>
+      <div class="form-group">
+        <label for="in-justif">Justification*</label>
+        <input type="text" class="form-control" id="in-justif" aria-describedby="emailHelp" placeholder="indiquer justification">
+      </div>
+      <div class="form-group">
+        <label for="in-cap">Capacité nécessaire*</label>
+        <input type="number" class="form-control" id="in-cap" placeholder="entrer un nombre">
+      </div>
+      <div class="form-group">
+        <label for="in-date">Date*</label>
+        <input type="date" class="form-control" id="in-date">
+      </div>
+      <div class="form-group">
+        <label for="in-begin">Heure de début*</label>
+        <input type="time" class="form-control" id="in-begin">
+      </div>
+      <div class="form-group">
+        <label for="in-end">Heure de fin*</label>
+        <input type="time" class="form-control" id="in-end">
+      </div>
+      <div class="form-group">
+        <label for="in-materials">Liste des matériaux*</label>
+        <select class="form-control" multiple id="in-materials">
+            <option *ngFor = "let material of materials"> 
+                <p> {{material.name}}  </p>
+            </option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="in-notes">Remarques additionnelles</label>
+        <input type="text" class="form-control" id="in-notes" aria-describedby="emailHelp" placeholder="indiquer les remarques éventuelles">
+      </div>
+      <button type="submit" class="btn btn-primary">Envoyer</button>
+</form>

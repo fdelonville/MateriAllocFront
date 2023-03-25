@@ -2,6 +2,10 @@
 <p> Début : {{request.beginAt | date : "hh:mm"}} </p>
 <p> Fin : {{request.endAt | date : "hh:mm"}} </p>
 <p>Matériel :</p>
-<ul>
+<ul *ngIf = "materials.length > 0">
     <li *ngFor = "let material of materials"> {{material.name}} </li>
 </ul>
+<ul>
+    <li *ngIf = "materials.length === 0"> aucun </li>
+</ul>
+<a routerLink="/requetes">Retour</a>

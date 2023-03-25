@@ -9,7 +9,7 @@
     </select>
 <ul>
     <li *ngFor="let request of requests">
-        <a [routerLink]="[request.id]"><h4> {{request.id}} </h4></a>
+        <a routerLink="{{request.id}}"><h4> {{request.id}} </h4></a>
         <p>Date : {{request.date}} </p>
         <p>Heure de début : {{request.beginTime}} </p>
         <p>Heure de fin : {{request.endTime}} </p>

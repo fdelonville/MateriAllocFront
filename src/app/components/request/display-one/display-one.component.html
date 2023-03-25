@@ -1,1 +1,7 @@
-<p>display-one works!</p>
+<h1> Requête : {{request.id}} </h1>
+<p> Début : {{request.beginAt | date : "hh:mm"}} </p>
+<p> Fin : {{request.endAt | date : "hh:mm"}} </p>
+<p>Matériel :</p>
+<ul>
+    <li *ngFor = "let material of materials"> {{material.name}} </li>
+</ul>

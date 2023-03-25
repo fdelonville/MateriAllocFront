@@ -6,22 +6,23 @@ import { DisplayAllComponent } from './components/request/display-all/display-al
 import { DisplayOneComponent } from './components/request/display-one/display-one.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    pathMatch: 'full',
-    redirectTo: 'accueil'
-  },
+  
   {
     path: 'accueil',
     component: AccueilComponent
   },
   {
-    path: 'requetes/1',
+    path: 'requetes/:id',
     component: DisplayOneComponent
   },
   {
     path: 'requetes',
     component: DisplayAllComponent
+  },
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'accueil'
   },
   { path: '404', component: Page404Component },
   { path: '**', redirectTo: '404'}

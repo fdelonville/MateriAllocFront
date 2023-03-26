@@ -12,6 +12,7 @@ import { DisplayAllComponent } from './components/request/display-all/display-al
 import { DisplayOneComponent } from './components/request/display-one/display-one.component';
 import { Page404Component } from './components/page404/page404.component';
 import { NewComponent } from './components/request/new/new.component';
+import { LogoutComponent } from './components/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { NewComponent } from './components/request/new/new.component';
     DisplayAllComponent,
     DisplayOneComponent,
     Page404Component,
-    NewComponent
+    NewComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

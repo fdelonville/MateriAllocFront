@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { LoginForm } from 'src/app/models/loginform';
 import { AuthService } from 'src/app/services/auth/auth.service';
 
@@ -11,7 +12,7 @@ import { AuthService } from 'src/app/services/auth/auth.service';
 export class LoginComponent {
   form: FormGroup
   
-  constructor(private readonly authService: AuthService){
+  constructor(private readonly authService: AuthService, private router: Router){
     this.form = new FormGroup({
       'username': new FormControl('',Validators.minLength(2)),
       'password': new FormControl('',Validators.minLength(2)),
@@ -26,6 +27,7 @@ export class LoginComponent {
             sessionStorage.setItem('token',r.token)
             sessionStorage.setItem('roles', r.roles)
             sessionStorage.setItem('username', r.username)
+            window.location.reload()
           }
       })
       this.form.reset({

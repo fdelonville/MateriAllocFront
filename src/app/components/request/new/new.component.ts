@@ -40,11 +40,11 @@ export class NewComponent implements OnInit{
 
   onSubmit(){
     console.log (this.form.value)
-    if( this.form.valid ){
-      const requestForm: RequestForm = {...this.form.value}
-      this.requestService.addRequest(requestForm).subscribe()
-      this.form.reset()
-    }
+    // if( this.form.valid ){
+    //   const requestForm: RequestForm = {...this.form.value}
+    //   this.requestService.addRequest(requestForm).subscribe()
+    //   this.form.reset()
+    // }
   }
 
   ngOnInit(): void {

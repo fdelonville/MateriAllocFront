@@ -1,4 +1,4 @@
-<h1> Requête : {{request.id}} </h1>
+<h1> Demande : {{request.id}} </h1>
 <p> Début : {{request.beginAt | date : "hh:mm"}} </p>
 <p> Fin : {{request.endAt | date : "hh:mm"}} </p>
 <p>Matériel :</p>
@@ -8,4 +8,4 @@
 <ul>
     <li *ngIf = "materials.length === 0"> aucun </li>
 </ul>
-<a routerLink="/requetes">Retour</a>
+<btn class="btn btn-primary" routerLink="/requetes">Retour</btn>

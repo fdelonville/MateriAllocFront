@@ -44,11 +44,10 @@ export class NewComponent implements OnInit{
       this.requestService.addRequest(requestForm).subscribe(
         {next: () => this.form.reset()}
       )
-      
     }
   }
 
-  onClick(id: number): void{
+  onAdd(id: number): void{
     if(!this.materialIds.includes(id)){
       this.materialIds.push(id)
       console.log(this.materialIds)

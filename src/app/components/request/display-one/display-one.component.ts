@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Material } from 'src/app/models/material.model';
 import { RequestService } from 'src/app/services/request.service'
 
@@ -14,7 +14,7 @@ export class DisplayOneComponent implements OnInit {
   request!: any
   materials!: Material[]
 
-  constructor(private readonly requestService: RequestService, private route: ActivatedRoute){}
+  constructor(private readonly requestService: RequestService, private route: ActivatedRoute, private router: Router){}
   ngOnInit(): void {
     const id = this.route.snapshot.params["id"]
     this.id = id
@@ -22,6 +22,9 @@ export class DisplayOneComponent implements OnInit {
       {next:(r:any) => {
         this.request = r;
         this.materials = r.neededMaterials;
+     },
+     error:()=>{
+      this.router.navigateByUrl("/404")
      }
     })
   }

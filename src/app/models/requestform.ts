@@ -4,9 +4,9 @@ export type RequestForm = {
     userLogin: string,
     justification: string,
     neededCapacity: number,
-    date: Date,
-    beginAt: Time,
-    endAt: Time,
-    materialIDs: number[],
+    date: string,
+    beginAt: string,
+    endAt: string,
+    materialIds: number[],
     additionalNotes: string
 }
